@@ -2,7 +2,7 @@
 *Files to look at*:
 
 * [CustomColumnChooser.cs](./CS/DevExCustomColumnChooser/CustomColumnChooser.cs) (VB: [CustomColumnChooser.vb](./VB/DevExCustomColumnChooser/CustomColumnChooser.vb))
-* [MainWindow.xaml](./CS/DevExCustomColumnChooser/MainWindow.xaml) (VB: [MainWindow.xaml.vb](./VB/DevExCustomColumnChooser/MainWindow.xaml.vb))
+* [MainWindow.xaml](./CS/DevExCustomColumnChooser/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/DevExCustomColumnChooser/MainWindow.xaml))
 * [MainWindow.xaml.cs](./CS/DevExCustomColumnChooser/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/DevExCustomColumnChooser/MainWindow.xaml.vb))
 <!-- default file list end -->
 # How to Create a Custom Column Chooser
