@@ -1,37 +1,19 @@
-<!-- default file list -->
-*Files to look at*:
+# How to: Create a Custom Column Chooser
 
-* [CustomColumnChooser.cs](./CS/DevExCustomColumnChooser/CustomColumnChooser.cs) (VB: [CustomColumnChooser.vb](./VB/DevExCustomColumnChooser/CustomColumnChooser.vb))
-* [MainWindow.xaml](./CS/DevExCustomColumnChooser/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/DevExCustomColumnChooser/MainWindow.xaml))
-* [MainWindow.xaml.cs](./CS/DevExCustomColumnChooser/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/DevExCustomColumnChooser/MainWindow.xaml.vb))
-<!-- default file list end -->
-# How to Create a Custom Column Chooser
+Starting with v17.2, we provide a new [Column Chooser](https://documentation.devexpress.com/WPF/6154/Controls-and-Libraries/Data-Grid/End-User-Interaction/Column-Chooser) control.  This control allows you to filter columns and hide/show them using corresponding checkboxes. This example illustrates how you can define this chooser in standalone mode and connect it to your GridControl. 
 
+To do this, add **ExtendedColumnChooserControl** to your layout and define its *Owner* and *FlowDirection* properties as follows: 
 
-This example shows how to create a custom standalone **Column Chooser** and display it within the **Expander** control.</p>
-
-
-### Description
-
-In this example, we implemented a custom **CustomColumnChooserControl** control that can be placed on a form. For example:
 ````xaml
-<Grid>
-    <Grid.ColumnDefinitions>
-        <ColumnDefinition />
-        <ColumnDefinition Width="170"/>
-    </Grid.ColumnDefinitions>
-    <dxg:GridControl x:Name="grid">
-        <dxg:GridControl.View>
-            <dxg:TableView x:Name="tableView" />
-        </dxg:GridControl.View>
-    </dxg:GridControl>
-    <local:CustomColumnChooserControl x:Name="columnChooser" Grid.Column="1"/>
-</Grid>
+<dxg:ExtendedColumnChooserControl
+       Owner="{Binding ElementName=tableView}" 
+       FlowDirection="{Binding Owner.FlowDirection, RelativeSource={RelativeSource Self}}"/>
 ````
 
-To associate it with a grid, set the CustomColumnChooserControl's **View** property to the grid's [View](http://documentation.devexpress.com/#WPF/DevExpressXpfGridGridControl_Viewtopic) object and set the [DataViewBase.ColumnChooserFactory](http://documentation.devexpress.com/#WPF/DevExpressXpfGridDataViewBase_ColumnChooserFactorytopic) property in the following manner:
+To hide the context menu item that shows and hides GridControl's default Column Chooser, use a corresponding [RemoveAction](https://documentation.devexpress.com/WPF/clsDevExpressXpfBarsRemoveActiontopic) in TableView's [ColumnMenuCustomizations](https://documentation.devexpress.com/WPF/DevExpress.Xpf.Grid.DataViewBase.ColumnMenuCustomizations.property) as we described in the [Context Menus](https://documentation.devexpress.com/WPF/6587/Controls-and-Libraries/Data-Grid/End-User-Interaction/Context-Menus) help topic: 
 
-````cs
-columnChooser.View = view;
-view.ColumnChooserFactory = New CustomColumnChooser(columnChooser);
+````xaml
+<dxg:TableView.ColumnMenuCustomizations>
+    <dxb:RemoveAction ElementName="{x:Static dxg:DefaultColumnMenuItemNames.ColumnChooser}"/>
+</dxg:TableView.ColumnMenuCustomizations>
 ````
