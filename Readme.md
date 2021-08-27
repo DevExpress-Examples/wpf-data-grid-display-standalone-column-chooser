@@ -1,3 +1,8 @@
+<!-- default badges list -->
+![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/128649119/17.2.3%2B)
+[![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E1661)
+[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
+<!-- default badges end -->
 # How to: Create a Custom Column Chooser
 
 Starting with v17.2, we provide a new [Column Chooser](https://documentation.devexpress.com/WPF/6154/Controls-and-Libraries/Data-Grid/End-User-Interaction/Column-Chooser) control.  This control allows you to filter columns and hide/show them using corresponding checkboxes. This example illustrates how you can define this chooser in standalone mode and connect it to your GridControl. 
