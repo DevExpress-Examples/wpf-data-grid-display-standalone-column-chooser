@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevExCustomColumnChooser", "DevExCustomColumnChooser\DevExCustomColumnChooser.csproj", "{41E84D53-EA00-437F-8320-32C71B0ED798}"
+# Visual Studio 16
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevExCustomColumnChooser", "DevExCustomColumnChooser\DevExCustomColumnChooser.Net5.csproj", "{41E84D53-EA00-437F-8320-32C71B0ED798}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
