@@ -9,14 +9,14 @@ This example displays the [column chooser](http://docs.devexpress.com/WPF/6217/c
 
 ![image](https://user-images.githubusercontent.com/65009440/173013222-48dffa6d-5f00-48ef-a0cc-eaf1f5d85a00.png)
 
-1. Add [ExtendedColumnChooserControl](http://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.ExtendedColumnChooserControl) to your layout and define its **Owner** and **FlowDirection** properties:
+* Add [ExtendedColumnChooserControl](http://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.ExtendedColumnChooserControl) to your layout and define its **Owner** and **FlowDirection** properties:
 
 ```xaml
 <dxg:ExtendedColumnChooserControl Owner="{Binding ElementName=tableView}" 
                                   FlowDirection="{Binding Owner.FlowDirection, RelativeSource={RelativeSource Self}}"/>
 ```
 
-2. Hide the context menu item that shows and hides GridControl's Column Chooser. Add a [RemoveAction](https://docs.devexpress.com/WPF/DevExpress.Xpf.Bars.RemoveAction) object to the TableView's [ColumnMenuCustomizations](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataViewBase.ColumnMenuCustomizations) collection:
+* Hide the context menu item that shows and hides GridControl's Column Chooser. Add a [RemoveAction](https://docs.devexpress.com/WPF/DevExpress.Xpf.Bars.RemoveAction) object to the TableView's [ColumnMenuCustomizations](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.DataViewBase.ColumnMenuCustomizations) collection:
 
 ```xaml
 <dxg:TableView.ColumnMenuCustomizations>
